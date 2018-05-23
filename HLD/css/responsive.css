@@ -7,3 +7,22 @@
     text-align: center;
   }
 }
+
+@media screen and (max-width: 560px) {
+  nav #LOGO {
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  #subTitle {
+  margin-top: 130px;
+  text-align: center;
+  color: #454545;
+  font-size: 35px;
+}
+
+#subDisp {
+  text-align: center;
+  margin-top: -20px;
+}
+}

@@ -1,0 +1,50 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HLD | Ivesheadschool GitHub</title>
+    <link rel="stylesheet" href="css\master.css">
+    <link rel="stylesheet" href="css\nav.css">
+    <link rel="stylesheet" href="css\options.css">
+    <link rel="stylesheet" href="css\responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <nav>
+      <h1 id="LOGO">IVESHEADSCHOOL<span id="LOGO_SUB">FORM</span></h1>
+    </nav>
+    <h1 id="subTitle">Pick your Activity Year 9/10</h1>
+    <p id="subDisp">Please select your favorite option from the list below</p>
+    <div class="options" id="options">
+      <script type="text/javascript">
+        var activs = ["Clubbercise","Insanity","Endurance Running","Walk","Aqua Fit","Aerobics","Boxercise","Circuit Training","Boot Camp","Badminton","Rounders","Athletics","Short Tennis","Pilates","Mindfull Colouring","Quiet Reading","Mindfulness","High Intensity Ttaining","Yoga"]
+        //activs.splice(pos, 1);
+        var theChosenOnes = []
+        
+        // Make fourm using the array data 'activs'.
+        function drawActivs() {
+          for (i = 0; i < activs.length; i++) {
+            var _opt = document.createElement("div");
+            _opt.className = "opt";
+            _opt.setAttribute("id", "OPTNUM"+i)
+
+            var _p = document.createElement("p");
+            var activName = document.createTextNode(activs[i]);
+            _p.appendChild(activName);
+
+            var _input = document.createElement("input");
+            _input.setAttribute("type", "number")
+            _input.setAttribute("max", activs.length)
+            _input.setAttribute("min", "1")
+            _input.setAttribute("id", "INPUT"+i)
+
+            _opt.appendChild(_p);
+            _opt.appendChild(_input);
+            document.getElementById("options").appendChild(_opt);
+          }
+        }
+        drawActivs();
+      </script>
+    </div>
+    <button type="button" name="button" onclick="checkIfDupp()">Submit!</button>
+  </body>
+</html>

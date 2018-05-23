@@ -1,1 +1,9 @@
-1
+@media screen and (max-width: 830px) {
+  nav #LOGO {
+    margin-top: 20px;
+    margin-left: 0px;
+    color: #FFFFFF;
+    font-size: 30px;
+    text-align: center;
+  }
+}
